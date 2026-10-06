@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quizzy - Online Quiz</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="logo">
+            🧠 Quizzy
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#difficulty">Difficulty</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to <span>Quizzy!</span> 🎯</h1>
+
+            <p>
+                Test your knowledge, learn new things,
+                and challenge yourself with exciting quizzes.
+            </p>
+
+            <a href="#difficulty" class="btn">
+                Start Exploring 🚀
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DIFFICULTY ================= -->
+    <section id="difficulty" class="section">
+
+        <h2>Choose Your Difficulty</h2>
+
+        <p class="subtitle">
+            Select a level according to your knowledge.
+        </p>
+
+        <div class="cards">
+
+            <!-- EASY -->
+            <div class="card easy">
+
+                <div class="icon">😊</div>
+
+                <h3>Easy</h3>
+
+                <p>
+                    Perfect for beginners.
+                    Test your basic knowledge.
+                </p>
+
+                <button onclick="startQuiz('easy')">
+                    Start Easy Quiz
+                </button>
+
+            </div>
+
+
+            <!-- MEDIUM -->
+            <div class="card medium">
+
+                <div class="icon">🤔</div>
+
+                <h3>Medium</h3>
+
+                <p>
+                    A little challenging.
+                    Test your understanding.
+                </p>
+
+                <button onclick="startQuiz('medium')">
+                    Start Medium Quiz
+                </button>
+
+            </div>
+
+
+            <!-- HARD -->
+            <div class="card hard">
+
+                <div class="icon">🔥</div>
+
+                <h3>Hard</h3>
+
+                <p>
+                    Challenge yourself with
+                    difficult questions.
+                </p>
+
+                <button onclick="startQuiz('hard')">
+                    Start Hard Quiz
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section id="categories" class="section categories">
+
+        <h2>Choose a Quiz Topic 📚</h2>
+
+        <p class="subtitle">
+            Select your favourite subject and start learning.
+        </p>
+
+        <div class="category-container">
+
+            <div class="category-card"
+                 onclick="selectCategory('Computer')">
+                💻
+                <h3>Computer</h3>
+                <p>Computer basics and technology</p>
+            </div>
+
+
+            <div class="category-card"
+                 onclick="selectCategory('Java')">
+                ☕
+                <h3>Java</h3>
+                <p>Java programming questions</p>
+            </div>
+
+
+            <div class="category-card"
+                 onclick="selectCategory('Networking')">
+                🌐
+                <h3>Networking</h3>
+                <p>Computer network questions</p>
+            </div>
+
+
+            <div class="category-card"
+                 onclick="selectCategory('General Knowledge')">
+                🧠
+                <h3>General Knowledge</h3>
+                <p>Test your general knowledge</p>
+            </div>
+
+
+            <div class="category-card"
+                 onclick="selectCategory('Science')">
+                🔬
+                <h3>Science</h3>
+                <p>Interesting science questions</p>
+            </div>
+
+
+            <div class="category-card"
+                 onclick="selectCategory('Technology')">
+                🚀
+                <h3>Technology</h3>
+                <p>Modern technology and IT</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUIZ AREA ================= -->
+    <section id="quiz" class="quiz-section">
+
+        <div class="quiz-box">
+
+            <h2 id="quiz-title">Quiz</h2>
+
+            <p id="question">
+                Your question will appear here.
+            </p>
+
+            <div id="answers" class="answers">
+                <!-- Answers will be added by JavaScript -->
+            </div>
+
+            <button id="next-btn" onclick="nextQuestion()">
+                Next Question →
+            </button>
+
+            <p id="score">
+                Score: 0
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section about">
+
+        <h2>About Quizzy</h2>
+
+        <p>
+            Quizzy is a simple online quiz website designed
+            to improve knowledge through fun and interactive
+            quizzes. Choose a topic, select your difficulty
+            level and start your quiz!
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            © 2026 Quizzy | Learn • Play • Improve 🎓
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
